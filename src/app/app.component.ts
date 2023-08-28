@@ -7,32 +7,33 @@ import { FaceSnap } from './models/face-snap.model';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  mySnap!: FaceSnap;
-  myOtherSnap!: FaceSnap;
-  mylastSnap!: FaceSnap;
+  faceSnaps!: FaceSnap[];
 
   ngOnInit(): void {
-    this.mySnap = new FaceSnap(
-      'Montagne',
-      'Une magnifique photo du ciel et d\'une montagne',
-      new Date(),
-      0,
-      'https://fastly.picsum.photos/id/866/800/800.jpg?hmac=jOhh1fmt65azfYe6D-XbxCIcXW6JD-mjHYepnMJD110',
-    );
-    this.myOtherSnap = new FaceSnap(
-      'Mon chien',
-      'Une photo de mon petit chien',
-      new Date(),
-      0,
-      'https://fastly.picsum.photos/id/237/800/800.jpg?hmac=vCdYL_CRxqCGRhpbwB6Q2uD9BMcs7wHZ0hb28qxtrYE',
-    );
-    this.mylastSnap = new FaceSnap(
-      'Moi sur Angular',
-      'Une photo moi sur Angular',
-      new Date(),
-      0,
-      'https://fastly.picsum.photos/id/5/800/800.jpg?hmac=pkRT69hNPc8vc44_7ane1t0WgN5hH1eoYWzpkN-MTXs',
-    );
+    this.faceSnaps = [
+      {
+        title : 'Montagne',
+        description : 'Une magnifique photo du ciel et d\'une montagne',
+        createdDate : new Date(),
+        snaps : 0,
+        imageUrl : 'https://cdn.pixabay.com/photo/2017/02/01/22/02/mountain-landscape-2031539_1280.jpg',
+        location : 'Paris'
+      },
+      {
+        title : 'Mon chien',
+        description : 'Une photo de mon petit chien',
+        createdDate : new Date(),
+        snaps : 0,
+        imageUrl : 'https://cdn.pixabay.com/photo/2019/08/19/07/45/corgi-4415649_1280.jpg'
+      },
+      {
+        title : 'Moi sur Angular',
+        description : 'Une photo moi sur Angular',
+        createdDate : new Date(),
+        snaps : 0,
+        imageUrl : 'https://cdn.pixabay.com/photo/2015/09/17/17/25/code-944499_1280.jpg'
+      },
+    ]
   }
 
 
