@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
         title : 'Montagne',
         description : 'Une magnifique photo du ciel et d\'une montagne',
         createdDate : new Date(),
-        snaps : 0,
+        snaps : 140,
         imageUrl : 'https://cdn.pixabay.com/photo/2017/02/01/22/02/mountain-landscape-2031539_1280.jpg',
         location : 'Paris'
       },
